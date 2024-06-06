@@ -1,26 +1,31 @@
-
-// On initialise 2 variables avec leurs classe
-
 const sushi = document.querySelector('.sushi img');
 const count = document.querySelector('.count');
-
-// On créer le compteur
+const bonusButton = document.querySelector('.bonus');
 
 let clickCount = 0;
+let multiplier = 1;
 
-//on créer l'event
-
-sushi.addEventListener('click', (event) => {
+sushi.addEventListener('click', () => {
     sushi.classList.toggle('clicked');
-
-    // à chaque clique on aditionne
-    clickCount++;
-
-    // on met le nombre de texte dans la variable count (.count)
+    
+    // Incrémenter le compteur en fonction du multiplicateur
+    clickCount += multiplier;
+    
     count.innerHTML = `Nombre de clics : ${clickCount}`;
 
-    
     setTimeout(() => {
         sushi.classList.remove('clicked');
     }, 200);
 });
+
+bonusButton.addEventListener('click', () => {
+    // Vérifier si le compteur de clics est supérieur à 50
+    if (clickCount >= 50) {
+        // Soustraire 50 points du compteur de clics
+        clickCount -= 50;
+        // Multiplier par 2 à chaque clic sur le bouton bonus
+        multiplier *= 2;
+    }
+});
+
+
