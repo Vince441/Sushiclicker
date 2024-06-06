@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.77.4"
+  },
+  "name": "sushiclicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch styles/index.scss:styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
