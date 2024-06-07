@@ -2,6 +2,14 @@ const sushi = document.querySelector(".sushi img");
 const count = document.querySelector(".count");
 const bonusButton = document.getElementById("#bonus");
 
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', 'top:'+(e.pageY - 100)+"px; left:"+(e.pageX - 70)+"px;")
+})
+
+
 let nombreClics = 0;
 let sushiPerCliks = 1;
 
