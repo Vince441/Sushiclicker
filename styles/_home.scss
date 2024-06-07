@@ -38,7 +38,7 @@
       width: 100px;
       height: 100px;
       position: relative;
-      z-index: 99;
+      // z-index: 99;
       p{
         text-shadow: 1px 1px 1px black;
       }
@@ -63,15 +63,6 @@
         display: flex;
         align-items: center;
         flex: 1;
-      }
-      .images-bonus{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: -1;
-        img {
-          width: 50px;
-        }
       }
     }
     .bonus {
@@ -98,3 +89,16 @@
   letter-spacing: -2px;
   font-weight: 100;
 }
+
+
+// .cursor {
+//   width: 200px;
+//   height: 200px;
+//   position: absolute;
+//   animation: Anim1 1s infinite alternate;
+//   cursor: not-allowed;
+// pointer-events: none;
+// background-image: url(images/baguette.png);
+// background-position: center;
+// background-size: cover;
+// }

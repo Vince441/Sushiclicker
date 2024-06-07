@@ -9,7 +9,7 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   background-image: url(./images/fond.png);
   background-position: center;
   background-size: cover;
@@ -63,7 +63,6 @@ body {
   width: 100px;
   height: 100px;
   position: relative;
-  z-index: 99;
 }
 .container_bonus #bonus .bonus_item_content p {
   text-shadow: 1px 1px 1px black;
@@ -87,15 +86,6 @@ body {
   display: flex;
   align-items: center;
   flex: 1;
-}
-.container_bonus #bonus .bonus_item_content .images-bonus {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-.container_bonus #bonus .bonus_item_content .images-bonus img {
-  width: 50px;
 }
 .container_bonus #bonus .bonus {
   width: 80px;

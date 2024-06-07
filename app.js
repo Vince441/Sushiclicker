@@ -19,9 +19,9 @@ sushi.addEventListener("click", () => {
   }, 200);
 });
 
-function createBonus(bonus, bonus_price, bonus_click, bonus_level, bonus_images) {
+function createBonus(bonus, bonus_price, bonus_click, bonus_level) {
   return `
-<div class="bonus" id="${bonus}" onClick="bonus(['${bonus}', ${bonus_price}, ${bonus_click}, ${bonus_level}, ${bonus_images}])">
+<div class="bonus" id="${bonus}" onClick="bonus(['${bonus}', ${bonus_price}, ${bonus_click}, ${bonus_level}])">
 <div class="bonus_item_content">
 <div class="bonus_name">
 <p>${bonus.toUpperCase()}</p>
@@ -34,9 +34,7 @@ function createBonus(bonus, bonus_price, bonus_click, bonus_level, bonus_images)
 </div>
 <div class="level">
 <p class="level_text">Level ${bonus_level}</p>
-
 </div>
-<div class="images-bonus"><img src="${bonus_images}"/></div>
 </div>
 </div>
 `;
@@ -48,14 +46,12 @@ const bonusToAdd = [
     bonus_price: 20,
     bonus_click: 1.2,
     bonus_level: 0,
-    bonus_image: "images/maki.png",
   },
   {
     bonus_name: "Gyoza",
     bonus_price: 100,
     bonus_click: 6.6,
     bonus_level: 0,
-    bonus_image: "images/gyoza.png",
   },
 
   {
@@ -63,14 +59,12 @@ const bonusToAdd = [
     bonus_price: 250,
     bonus_click: 15.6,
     bonus_level: 0,
-    bonus_image: "images/onigiri.png",
   },
   {
     bonus_name: "California Rolls",
     bonus_price: 500,
     bonus_click: 32,
     bonus_level: 0,
-    bonus_image: "images/calif.png",
   },
 
   {
@@ -78,7 +72,6 @@ const bonusToAdd = [
     bonus_price: 1000,
     bonus_click: 70,
     bonus_level: 0,
-    bonus_image: "images/sashimi.png",
   },
 
   {
@@ -86,7 +79,6 @@ const bonusToAdd = [
     bonus_price: 99999,
     bonus_click: 400,
     bonus_level: 0,
-    bonus_image: "images/ramen.png",
   },
 ];
 
@@ -123,8 +115,7 @@ const generatebonus = () => {
       bonusToAdd[i].bonus_name,
       bonusToAdd[i].bonus_price,
       bonusToAdd[i].bonus_click,
-      bonusToAdd[i].bonus_level,
-      bonusToAdd[i].bonus_image
+      bonusToAdd[i].bonus_level
     );
 
     cards.innerHTML += html;
