@@ -38,40 +38,75 @@ body {
   transform: scale(1.1);
 }
 
-#bonus {
-  width: 25vw;
+.container_bonus {
+  background-color: #d33c29;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 20vw;
+  outline: 4px solid black;
+}
+.container_bonus #bonus {
   gap: 5px;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  border: 1px solid rgb(165, 79, 79);
-  box-shadow: 3px 3px 5px rgb(165, 79, 79);
+  flex-wrap: wrap;
 }
-#bonus .bonus_item_content {
+.container_bonus #bonus .bonus_item_content {
   display: flex;
+  flex-direction: column;
   padding: 1%;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 99;
 }
-#bonus .bonus_item_content .bonus_name {
+.container_bonus #bonus .bonus_item_content p {
+  text-shadow: 1px 1px 1px black;
+}
+.container_bonus #bonus .bonus_item_content .bonus_name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container_bonus #bonus .bonus_item_content .price {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container_bonus #bonus .bonus_item_content .click_bonus {
+  display: flex;
+  align-items: center;
   flex: 1;
 }
-#bonus .bonus_item_content .price {
+.container_bonus #bonus .bonus_item_content .level {
+  display: flex;
+  align-items: center;
   flex: 1;
 }
-#bonus .bonus_item_content .click_bonus {
-  flex: 1;
+.container_bonus #bonus .bonus_item_content .images-bonus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
 }
-#bonus .bonus_item_content .level {
-  flex: 1;
+.container_bonus #bonus .bonus_item_content .images-bonus img {
+  width: 50px;
 }
-#bonus .bonus {
-  padding: 5px;
-  width: 100%;
+.container_bonus #bonus .bonus {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  height: 50x;
+  border: 2px solid white;
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: rgb(37, 34, 34);
 }
 
 .container-point {
@@ -79,7 +114,6 @@ body {
   transform: translateY(-50%);
   top: 50%;
   left: 5%;
-  border: 1px solid red;
   font-size: 4rem;
   width: 25vw;
   letter-spacing: -2px;
