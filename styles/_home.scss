@@ -12,3 +12,54 @@
     }
   }
 }
+
+#bonus{
+  width: 25vw;
+  position: absolute;
+ top: 5px;
+ right: 5px;
+  gap: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border : 1px solid rgb(165, 79, 79);
+box-shadow: 3px 3px 5px rgb(165, 79, 79);
+.bonus_item_content {
+  display: flex;
+  padding: 1%;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+
+  .bonus_name{
+    flex: 1;
+  }
+  .price {
+    flex: 1;
+  }
+  .click_bonus {
+    flex: 1;
+  }
+  .level {
+    flex: 1;
+  }
+}
+.bonus {
+
+  padding: 5px;
+width: 100%;
+
+}
+}
+
+.container-point{
+  position: absolute;
+  transform: translateY(-50%);
+  top : 50%;
+  left : 5%;
+  border: 1px solid red;
+  font-size: 4rem;
+  width: 25vw;
+  letter-spacing: -2px;
+  font-weight: 100;
+}

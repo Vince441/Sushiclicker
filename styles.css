@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/open-sans-condensed-2?styles=80716,80717,80715");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -13,6 +14,14 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+:root {
+  --primary-font: "Open Sans Condensed", sans-serif;
+  font-size: 10px;
 }
 
 .sushi {
@@ -27,6 +36,54 @@ body {
 }
 .sushi img.clicked {
   transform: scale(1.1);
+}
+
+#bonus {
+  width: 25vw;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  gap: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(165, 79, 79);
+  box-shadow: 3px 3px 5px rgb(165, 79, 79);
+}
+#bonus .bonus_item_content {
+  display: flex;
+  padding: 1%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#bonus .bonus_item_content .bonus_name {
+  flex: 1;
+}
+#bonus .bonus_item_content .price {
+  flex: 1;
+}
+#bonus .bonus_item_content .click_bonus {
+  flex: 1;
+}
+#bonus .bonus_item_content .level {
+  flex: 1;
+}
+#bonus .bonus {
+  padding: 5px;
+  width: 100%;
+}
+
+.container-point {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 5%;
+  border: 1px solid red;
+  font-size: 4rem;
+  width: 25vw;
+  letter-spacing: -2px;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=styles.css.map */
