@@ -1,31 +1,33 @@
-const sushi = document.querySelector('.sushi img');
-const count = document.querySelector('.count');
-const bonusButton = document.querySelector('.bonus');
+const sushi = document.querySelector(".sushi img");
+const count = document.querySelector(".count");
+const bonusButton = document.querySelector(".bonus");
 
 let clickCount = 0;
 let multiplier = 1;
+let price = 50;
 
-sushi.addEventListener('click', () => {
-    sushi.classList.toggle('clicked');
-    
-    // Incrémenter le compteur en fonction du multiplicateur
-    clickCount += multiplier;
-    
-    count.innerHTML = `Nombre de clics : ${clickCount}`;
+sushi.addEventListener("click", () => {
+  sushi.classList.toggle("clicked");
 
-    setTimeout(() => {
-        sushi.classList.remove('clicked');
-    }, 200);
+  // Incrémenter le compteur en fonction du multiplicateur
+  clickCount += multiplier;
+
+  count.innerHTML = `Nombre de clics : ${clickCount}`;
+
+  setTimeout(() => {
+    sushi.classList.remove("clicked");
+  }, 200);
 });
 
-bonusButton.addEventListener('click', () => {
-    // Vérifier si le compteur de clics est supérieur à 50
-    if (clickCount >= 50) {
-        // Soustraire 50 points du compteur de clics
-        clickCount -= 50;
-        // Multiplier par 2 à chaque clic sur le bouton bonus
-        multiplier *= 2;
-    }
+bonusButton.addEventListener("click", () => {
+  // Vérifier si le compteur de clics est supérieur à 50
+  if (clickCount >= price) {
+    // Soustraire 50 points du compteur de clics
+    clickCount -= 50;
+    // Multiplier par 2 à chaque clic sur le bouton bonus
+    multiplier *= 1.25;
+    price *= 4;
+    bonusButton.innerHTML = `Count : ${price} sushis - Point x${(multiplier *= 2)}`;
+    
+  }
 });
-
-
